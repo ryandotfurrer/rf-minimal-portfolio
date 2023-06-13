@@ -1,0 +1,60 @@
+:root {
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+
+	/* Step -1: 13.33px → 16.67px */
+	--step--1: clamp(0.83rem, calc(0.8rem + 0.15vw), 1.04rem);
+	/* Step 0: 16.00px → 20.00px */
+	--step-0: clamp(1rem, calc(0.96rem + 0.18vw), 1.25rem);
+
+	/* Step 1: 19.20px → 25.00px */
+	--step-1: clamp(1.2rem, calc(1.15rem + 0.26vw), 1.56rem);
+
+	/* Step 2: 27.65px → 39.06px */
+	--step-2: clamp(1.73rem, calc(1.63rem + 0.51vw), 2.44rem);
+
+	/* Step 3: 33.18px → 48.83px */
+	--step-3: clamp(2.07rem, calc(1.93rem + 0.7vw), 3.05rem);
+
+	/* Step 4: 39.81px → 61.04px */
+	--step-4: clamp(2.49rem, calc(2.3rem + 0.95vw), 3.82rem);
+
+	--background: #ffffff;
+	--background-light: #e6e9ed;
+	--darkest: #1a1d20;
+	--header: #2c3136;
+	--subheader: #434a54;
+	--text: #656d78;
+	--accent: #3fc8a7;
+}
+
+body {
+	background: var(--background);
+}
+
+h1,
+h2 {
+	color: var(--header);
+	font-weight: 600;
+}
+
+h3 {
+	color: var(--subheader);
+	font-weight: 400;
+}
+
+h4 {
+	color: var(--darkest);
+	font-weight: 500;
+}
+
+p {
+	color: var(--text);
+	font-weight: 400;
+}
+
+button {
+	background: var(--subheader);
+	color: var(--background);
+	font-weight: 600;
+}
