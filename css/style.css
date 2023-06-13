@@ -34,6 +34,10 @@ body {
 	background: var(--background);
 }
 
+.body-inner-container {
+	padding: 0 2rem;
+}
+
 h1,
 h2 {
 	color: var(--header);
@@ -48,6 +52,7 @@ h3 {
 h4 {
 	color: var(--darkest);
 	font-weight: 500;
+	text-transform: uppercase;
 }
 
 p {
@@ -89,6 +94,11 @@ button {
 
 .stack > * + * {
 	margin-block-start: 1.5rem;
+}
+
+.main {
+	max-width: 70ch;
+	margin: 0 auto;
 }
 
 /* Specific Styling */
@@ -140,9 +150,75 @@ button {
 }
 
 .header,
-.main,
+.main {
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+}
+
+.header {
+	.btn-container {
+		display: flex;
+		flex-flow: column wrap;
+		gap: 1rem;
+	}
+}
+
+.contact-cta {
+	align-items: center;
+	background: var(--background-dark);
+	border: 1px solid var(--text);
+	border-radius: 0.25rem;
+	display: flex;
+	flex-flow: column wrap;
+	gap: 1rem;
+	padding: 4rem 2rem;
+
+	> h3 {
+		font-weight: 700;
+	}
+}
+
 .footer {
-	padding-top: 3rem;
+	background: var(--darkest);
+	margin-top: 3rem;
+	padding: 3rem 1rem 1rem;
+
+	.social-links-container {
+		> ul {
+			> li {
+				list-style: none;
+
+				> a {
+					color: var(--background);
+				}
+			}
+		}
+	}
+
+	.newsletter-container {
+		> h4,
+		p {
+			color: var(--text);
+		}
+	}
+
+	.sitemap-container {
+		> ul {
+			> li {
+				list-style: none;
+				> a {
+					color: var(--background);
+				}
+			}
+		}
+	}
+
+	.copyright-container {
+		color: var(--text);
+		> small > a {
+			color: var(--text);
+		}
+	}
 }
 
 /*-----Mobile Nav Styling-----*/
