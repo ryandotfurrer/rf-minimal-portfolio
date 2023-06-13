@@ -6,6 +6,7 @@
 
 * {
 	margin: 0;
+	padding: 0;
 }
 
 html:focus-within {
@@ -17,7 +18,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	line-height: 1.5;
 	min-height: 100vh;
-	padding: 0 1rem;
+	padding: 0 2rem;
 	text-rendering: optimizeLegibility;
 }
 

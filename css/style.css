@@ -20,7 +20,7 @@
 	--step-4: clamp(2.49rem, calc(2.3rem + 0.95vw), 3.82rem);
 
 	--background: #ffffff;
-	--background-light: #e6e9ed;
+	--background-dark: #e6e9ed;
 	--darkest: #1a1d20;
 	--header: #2c3136;
 	--subheader: #434a54;
@@ -53,8 +53,72 @@ p {
 	font-weight: 400;
 }
 
+a {
+	color: var(--accent);
+}
+
 button {
-	background: var(--subheader);
-	color: var(--background);
+	border: 2px solid red;
+	border-radius: 0.25rem;
 	font-weight: 600;
+}
+
+.nav {
+	align-items: center;
+	border-bottom: 1px solid var(--background-dark);
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0;
+
+	> h1 > #logo {
+		align-items: center;
+		color: var(--darkest);
+		font-size: 2.5rem;
+		text-decoration: none;
+	}
+
+	.navlist {
+		align-items: center;
+		display: flex;
+		gap: 2rem;
+		list-style: none;
+		justify-content: flex-end;
+		padding-inline-start: 0;
+
+		.navitem {
+			display: inline-block;
+
+			.navlink {
+				color: var(--text);
+				font-weight: 600;
+				text-decoration: none;
+
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+}
+
+.btn-primary {
+	background: var(--subheader);
+	border-color: var(--subheader);
+	color: var(--background);
+
+	&:hover {
+		background: var(--header);
+		border-color: var(--header);
+	}
+}
+
+.btn-secondary {
+	background: var(--background);
+	border-color: var(--subheader);
+	color: var(--subheader);
+
+	&:hover {
+		border-color: var(--darkest);
+		color: var(--darkest);
+	}
 }
