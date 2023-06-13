@@ -3,7 +3,7 @@
 	<head>
 		<title>Minimal Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Ryan Furrer" />
 		<meta name="description" content="A beautiful yet minimal website" />
 		<meta property="og:title" content="Minimal Portfolio" />
@@ -17,6 +17,13 @@
 		<!-- <meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:image:alt" content="image description" /> -->
 		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+
+		<script
+			src="https://kit.fontawesome.com/dec2579292.js"
+			crossorigin="anonymous"
+			async
+			defer
+		></script>
 
 		<link rel="stylesheet" href="/css/reset.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,6 +47,11 @@
 				<li class="navitem"><a href="#" class="navlink">About</a></li>
 				<li class="navitem"><a href="#" class="navlink">Now</a></li>
 			</ul>
+			<button id="hamburger" name="Mobile Menu" aria-label="Mobile Menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</button>
 		</nav>
 
 		<header class="header">
@@ -130,10 +142,16 @@
 			</div>
 			<div class="copyright-container">
 				<small
-					>All rights reservered &copy;
-					<a href="#">Ryan Furrer</a> 2023</small
+					>All rights reserved &copy;
+					<a href="/" rel="noopener noreferrer">Ryan Furrer</a>
+					<span id="footer-year">
+						<!-- Filled in with JavaScript -->
+					</span></small
 				>
 			</div>
 		</footer>
+
+		<script src="/js/get-current-year.js"></script>
+		<script src="/js/mobile-menu.js"></script>
 	</body>
 </html>

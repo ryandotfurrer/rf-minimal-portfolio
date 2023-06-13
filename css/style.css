@@ -86,8 +86,6 @@ button {
 		padding-inline-start: 0;
 
 		.navitem {
-			display: inline-block;
-
 			.navlink {
 				color: var(--text);
 				font-weight: 600;
@@ -97,6 +95,16 @@ button {
 					color: var(--accent);
 				}
 			}
+		}
+	}
+
+	#hamburger {
+		border: none;
+		display: none;
+		padding: 0;
+
+		.bar {
+			display: hidden;
 		}
 	}
 }
@@ -120,5 +128,64 @@ button {
 	&:hover {
 		border-color: var(--darkest);
 		color: var(--darkest);
+	}
+}
+
+/*-----Mobile Nav Styling-----*/
+@media only screen and (max-width: 1023px) {
+	.nav {
+		.navlist {
+			align-items: flex-end;
+			background-color: var(--darkest);
+			flex-direction: column;
+			height: 100%;
+			justify-content: right;
+			right: -100%;
+			padding: 4rem 2rem;
+			position: fixed;
+			top: 6rem;
+			transition: right 0.2s ease-in-out;
+			width: 100%;
+			z-index: 9999;
+
+			.navitem {
+				.navlink {
+					color: var(--background);
+				}
+			}
+		}
+
+		.navlist.active {
+			right: 0;
+		}
+
+		#hamburger {
+			display: block;
+			display: flex;
+			flex-flow: column wrap;
+			gap: 0.35rem;
+		}
+
+		.bar {
+			background-color: var(--darkest);
+			display: block;
+			height: 0.15rem;
+			/* margin: 5px auto; */
+			transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			width: 1.5rem;
+		}
+
+		#hamburger.active .bar:nth-child(2) {
+			opacity: 0;
+		}
+
+		#hamburger.active .bar:nth-child(1) {
+			transform: translateY(0.5rem) rotate(45deg);
+		}
+
+		#hamburger.active .bar:nth-child(3) {
+			transform: translateY(-0.5rem) rotate(-45deg);
+		}
 	}
 }
