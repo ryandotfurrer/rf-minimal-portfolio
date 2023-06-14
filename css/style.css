@@ -74,6 +74,7 @@ button {
 	background: var(--subheader);
 	border-color: var(--subheader);
 	color: var(--background);
+	transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
 
 	&:hover {
 		background: var(--header);
@@ -85,6 +86,8 @@ button {
 	background: var(--background);
 	border-color: var(--subheader);
 	color: var(--subheader);
+	transition: background 200ms ease-in-out, border-color 200ms ease-in-out,
+		color 200ms ease-in-out;
 
 	&:hover {
 		border-color: var(--darkest);
@@ -106,11 +109,6 @@ button {
 	&:last-child {
 		margin-bottom: 3rem;
 	}
-}
-
-.main {
-	max-width: 70ch;
-	margin: 0 auto;
 }
 
 /* Specific Styling */
@@ -142,6 +140,7 @@ button {
 				color: var(--text);
 				font-weight: 600;
 				text-decoration: none;
+				transition: color 200ms ease-in-out;
 
 				&:hover {
 					color: var(--accent);
@@ -175,8 +174,18 @@ button {
 	}
 }
 
-.main > .projects > .project-container .project-title-container > a,
-.main > .blog > .blog-post-container .blog-post-title-container > a {
+.main
+	> .projects
+	> .all-projects-container
+	> .project-container
+	> .project-title-container
+	> a,
+.main
+	> .blog
+	> .all-posts-container
+	> .blog-post-container
+	.blog-post-title-container
+	> a {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
@@ -193,6 +202,17 @@ button {
 			color: var(--accent);
 			padding-right: 1rem;
 		}
+	}
+}
+
+.newsletter-cta {
+	margin-top: 3rem;
+	> h3 {
+		font-weight: 600;
+	}
+
+	> .input-container {
+		margin-top: 1.5rem;
 	}
 }
 
@@ -213,6 +233,7 @@ button {
 
 .footer {
 	background: var(--darkest);
+	color: var(--text);
 	margin-top: 3rem;
 	padding: 3rem 1rem 1rem;
 
@@ -309,6 +330,37 @@ button {
 
 		#hamburger.active .bar:nth-child(3) {
 			transform: translateY(-0.5rem) rotate(-45deg);
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.body-inner-container {
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+
+	.header {
+		display: flex;
+		flex-flow: column wrap;
+		height: 40vh;
+		justify-content: center;
+		> .btn-container {
+			flex-direction: row;
+		}
+	}
+
+	.all-projects-container,
+	.all-posts-container {
+		column-gap: 3rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: 3rem;
+	}
+
+	.blog {
+		> .btn-container {
+			margin-top: 0;
 		}
 	}
 }
