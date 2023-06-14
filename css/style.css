@@ -94,6 +94,18 @@ button {
 
 .stack > * + * {
 	margin-block-start: 1.5rem;
+
+	&:last-child {
+		margin-bottom: 10rem;
+	}
+}
+
+.stack-sm > * + * {
+	margin-block-start: 1.5rem;
+
+	&:last-child {
+		margin-bottom: 3rem;
+	}
 }
 
 .main {
@@ -160,6 +172,27 @@ button {
 		display: flex;
 		flex-flow: column wrap;
 		gap: 1rem;
+	}
+}
+
+.main > .projects > .project-container .project-title-container > a,
+.main > .blog > .blog-post-container .blog-post-title-container > a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	text-decoration: none;
+	color: var(--darkest);
+
+	> h4 {
+		transition: padding-right 200ms ease-in-out;
+	}
+
+	&:hover {
+		color: var(--accent);
+		> h4 {
+			color: var(--accent);
+			padding-right: 1rem;
+		}
 	}
 }
 
