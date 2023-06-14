@@ -76,9 +76,11 @@ button {
 	color: var(--background);
 	transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
 
-	&:hover {
-		background: var(--header);
-		border-color: var(--header);
+	@media (hover: hover) {
+		&:hover {
+			background: var(--header);
+			border-color: var(--header);
+		}
 	}
 }
 
@@ -237,13 +239,23 @@ button {
 	margin-top: 3rem;
 	padding: 3rem 1rem 1rem;
 
+	> * h4 {
+		color: var(--text);
+	}
+
 	.social-links-container {
 		> ul {
+			display: flex;
+			flex-flow: row wrap;
+			gap: 1.5rem;
 			> li {
 				list-style: none;
 
 				> a {
 					color: var(--background);
+					> i {
+						font-size: var(--step-3);
+					}
 				}
 			}
 		}
@@ -258,10 +270,14 @@ button {
 
 	.sitemap-container {
 		> ul {
+			display: flex;
+			flex-flow: row wrap;
+			gap: 1.5rem;
 			> li {
 				list-style: none;
 				> a {
 					color: var(--background);
+					text-decoration: none;
 				}
 			}
 		}
@@ -361,6 +377,52 @@ button {
 	.blog {
 		> .btn-container {
 			margin-top: 0;
+		}
+	}
+
+	.contact-cta {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+
+	.footer {
+		.footer-inner-container {
+			align-items: center;
+			display: flex;
+			flex-flow: row wrap;
+			gap: 3rem;
+			justify-content: space-between;
+			max-width: 1600px;
+			margin: 0 auto;
+
+			> div {
+				flex-basis: 50%;
+			}
+		}
+
+		.social-links-container {
+			> ul {
+				> li {
+					> a {
+						&:hover {
+							color: var(--accent);
+						}
+					}
+				}
+			}
+		}
+
+		.sitemap-container {
+			> ul {
+				flex-direction: row;
+				> li {
+					> a {
+						&:hover {
+							color: var(--accent);
+						}
+					}
+				}
+			}
 		}
 	}
 }
