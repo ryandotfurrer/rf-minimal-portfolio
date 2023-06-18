@@ -24,13 +24,13 @@
 	/* Step 4: 39.81px → 61.04px */
 	--step-4: clamp(2.49rem, calc(2.3rem + 0.95vw), 3.82rem);
 
-	--background: #ffffff;
-	--background-dark: #e6e9ed;
-	--darkest: #1a1d20;
-	--header: #2c3136;
-	--subheader: #434a54;
-	--text: #656d78;
-	--accent: #3fc8a7;
+	--background: var(--gray-0);
+	--background-dark: var(--gray-3);
+	--darkest: var(--gray-10);
+	--header: var(--gray-9);
+	--subheader: var(--gray-8);
+	--text: var(--gray-6);
+	--accent: var(--teal-6);
 }
 
 body {
