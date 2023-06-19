@@ -12,9 +12,9 @@
 	margin: 0;
 }
 
-/* html {
+html {
 	color-scheme: light dark;
-} */
+}
 
 html:focus-within {
 	scroll-behavior: smooth;
