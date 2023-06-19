@@ -5,24 +5,6 @@
 
 :root {
 	font-family: 'Inter', var(--font-sans);
-	font-size: 16px;
-
-	/* Step -1: 13.33px → 16.67px */
-	--step--1: clamp(0.83rem, calc(0.8rem + 0.15vw), 1.04rem);
-	/* Step 0: 16.00px → 20.00px */
-	--step-0: clamp(1rem, calc(0.96rem + 0.18vw), 1.25rem);
-
-	/* Step 1: 19.20px → 25.00px */
-	--step-1: clamp(1.2rem, calc(1.15rem + 0.26vw), 1.56rem);
-
-	/* Step 2: 27.65px → 39.06px */
-	--step-2: clamp(1.73rem, calc(1.63rem + 0.51vw), 2.44rem);
-
-	/* Step 3: 33.18px → 48.83px */
-	--step-3: clamp(2.07rem, calc(1.93rem + 0.7vw), 3.05rem);
-
-	/* Step 4: 39.81px → 61.04px */
-	--step-4: clamp(2.49rem, calc(2.3rem + 0.95vw), 3.82rem);
 
 	--background: var(--gray-0);
 	--background-dark: var(--gray-3);
@@ -37,6 +19,8 @@
 
 body {
 	background: var(--background);
+	font-size: var(--font-size-fluid-0);
+	font-weight: 400;
 }
 
 .body-inner-container {
@@ -46,23 +30,28 @@ body {
 h1,
 h2 {
 	color: var(--header);
-	font-weight: 600;
+}
+
+h1 {
+	font-size: var(--font-size-fluid-3);
+}
+
+h2 {
+	font-size: var(--font-size-fluid-2);
 }
 
 h3 {
 	color: var(--subheader);
-	font-weight: 400;
+	font-size: var(--font-size-fluid-1);
 }
 
 h4 {
 	color: var(--darkest);
-	font-weight: 500;
 	text-transform: uppercase;
 }
 
 p {
 	color: var(--text);
-	font-weight: 400;
 }
 
 a {
@@ -71,8 +60,11 @@ a {
 
 button {
 	border: 2px solid red;
-	border-radius: 0.25rem;
-	font-weight: 600;
+	border-radius: var(--radius-2);
+}
+
+img {
+	border-radius: var(--radius-2);
 }
 
 .btn-primary {
@@ -131,7 +123,6 @@ button {
 	> h1 > #logo {
 		align-items: center;
 		color: var(--darkest);
-		font-size: 2.5rem;
 		text-decoration: none;
 	}
 
@@ -146,7 +137,6 @@ button {
 		.navitem {
 			.navlink {
 				color: var(--text);
-				font-weight: 600;
 				text-decoration: none;
 				transition: color var(--transition-200ms);
 
@@ -215,9 +205,6 @@ button {
 
 .newsletter-cta {
 	margin-top: 3rem;
-	> h3 {
-		font-weight: 600;
-	}
 
 	> .input-container {
 		margin-top: 1.5rem;
@@ -228,15 +215,11 @@ button {
 	align-items: center;
 	background: var(--background-dark);
 	border: 1px solid var(--text);
-	border-radius: 0.25rem;
+	border-radius: var(--radius-2);
 	display: flex;
 	flex-flow: column wrap;
 	gap: 1rem;
 	padding: 4rem 2rem;
-
-	> h3 {
-		font-weight: 700;
-	}
 }
 
 .footer {
@@ -260,7 +243,7 @@ button {
 				> a {
 					color: var(--background);
 					> i {
-						font-size: var(--step-3);
+						font-size: var(--font-size-fluid-1);
 					}
 				}
 			}

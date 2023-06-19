@@ -1,3 +1,7 @@
+:root {
+	font-size: 16px;
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +11,10 @@
 * {
 	margin: 0;
 }
+
+/* html {
+	color-scheme: light dark;
+} */
 
 html:focus-within {
 	scroll-behavior: smooth;
