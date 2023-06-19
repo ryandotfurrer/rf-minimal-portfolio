@@ -4,7 +4,7 @@
 /* Root Styles */
 
 :root {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Inter', var(--font-sans);
 	font-size: 16px;
 
 	/* Step -1: 13.33px → 16.67px */
@@ -31,6 +31,8 @@
 	--subheader: var(--gray-8);
 	--text: var(--gray-6);
 	--accent: var(--teal-6);
+
+	--transition-200ms: 200ms var(--ease-in-out-3);
 }
 
 body {
@@ -77,7 +79,8 @@ button {
 	background: var(--subheader);
 	border-color: var(--subheader);
 	color: var(--background);
-	transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+	transition: background var(--transition-200ms),
+		border-color var(--transition-200ms);
 
 	@media (hover: hover) {
 		&:hover {
@@ -91,8 +94,8 @@ button {
 	background: var(--background);
 	border-color: var(--subheader);
 	color: var(--subheader);
-	transition: background 200ms ease-in-out, border-color 200ms ease-in-out,
-		color 200ms ease-in-out;
+	transition: background var(--transition-200ms),
+		border-color var(--transition-200ms), color var(--transition-200ms);
 
 	&:hover {
 		border-color: var(--darkest);
@@ -101,18 +104,18 @@ button {
 }
 
 .stack > * + * {
-	margin-block-start: 1.5rem;
+	margin-block-start: 1.5em;
 
 	&:last-child {
-		margin-bottom: 10rem;
+		margin-bottom: 10em;
 	}
 }
 
 .stack-sm > * + * {
-	margin-block-start: 1.5rem;
+	margin-block-start: 1.5em;
 
 	&:last-child {
-		margin-bottom: 3rem;
+		margin-bottom: 3em;
 	}
 }
 
@@ -145,7 +148,7 @@ button {
 				color: var(--text);
 				font-weight: 600;
 				text-decoration: none;
-				transition: color 200ms ease-in-out;
+				transition: color var(--transition-200ms);
 
 				&:hover {
 					color: var(--accent);
@@ -198,7 +201,7 @@ button {
 	color: var(--darkest);
 
 	> h4 {
-		transition: padding-right 200ms ease-in-out;
+		transition: padding-right var(--transition-200ms);
 	}
 
 	&:hover {
@@ -307,7 +310,7 @@ button {
 			padding: 4rem 2rem;
 			position: fixed;
 			top: 6rem;
-			transition: right 0.2s ease-in-out;
+			transition: right var(--transition-200ms);
 			width: 100%;
 			z-index: 9999;
 
@@ -333,9 +336,8 @@ button {
 			background-color: var(--darkest);
 			display: block;
 			height: 0.15rem;
-			/* margin: 5px auto; */
-			transition: all 0.2s ease-in-out;
-			-webkit-transition: all 0.2s ease-in-out;
+			transition: all var(--transition-200ms);
+			-webkit-transition: all var(--transition-200ms);
 			width: 1.5rem;
 		}
 
