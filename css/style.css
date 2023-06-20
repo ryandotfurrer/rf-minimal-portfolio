@@ -12,22 +12,31 @@
 body {
 	background: var(--background);
 	color: var(--text);
+	display: grid;
 	font-size: var(--font-size-fluid-0);
 	font-weight: 400;
+	align-content: start;
+	justify-content: center;
 }
 
 .body-inner-container {
-	padding-inline: 2rem;
+	padding: 2rem 1rem 1rem;
 }
 
-.wrapper {
-	width: min(100% - 3rem), 70ch;
-	margin-inline: auto;
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
 }
 
 h1,
 h2 {
 	color: var(--header);
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.1;
+	text-wrap: balance;
 }
 
 h1 {
@@ -96,6 +105,7 @@ img {
 		border-bottom: 1px solid var(--background-dark);
 		display: flex;
 		justify-content: space-between;
+		padding-bottom: 2rem;
 
 		> h1 > #logo {
 			color: var(--darkest);
@@ -106,15 +116,15 @@ img {
 			background-color: var(--background-medium);
 			display: flex;
 			flex-direction: column;
-			gap: 1em;
+			gap: 2em;
 			height: 100%;
 			justify-content: right;
 			list-style: none;
 			padding-inline-start: 0;
-			/* padding: 4rem 2rem; */
+			padding: 2rem 1rem 0;
 			position: fixed;
 			right: -100%;
-			top: 5rem;
+			top: 8em;
 			transition: right var(--transition-200ms);
 			width: 100%;
 			z-index: 9999;
@@ -139,6 +149,7 @@ img {
 			display: flex;
 			flex-flow: column wrap;
 			gap: 0.35rem;
+			padding: 0;
 		}
 
 		.bar {
@@ -160,6 +171,20 @@ img {
 
 		#hamburger.active .bar:nth-child(3) {
 			transform: translateY(-0.5rem) rotate(-45deg);
+		}
+	}
+
+	.hero {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		height: 100dvh;
+
+		.btn-container {
+			display: flex;
+			flex-flow: column wrap;
+			gap: 1.5em;
+			margin-block-start: 3em;
 		}
 	}
 }
@@ -195,6 +220,25 @@ main {
 		> h4 {
 			padding-right: 1rem;
 		}
+	}
+}
+
+.projects {
+	.all-projects-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+
+		.project-container {
+			background: var(--background-medium);
+			border: 2px solid var(--background-dark);
+			border-radius: var(--radius-2);
+			padding: 1em;
+		}
+	}
+
+	.newsletter-cta {
+		margin-block-start: 3em;
 	}
 }
 
@@ -289,8 +333,8 @@ main {
 
 @media only screen and (min-width: 1024px) {
 	.body-inner-container {
-		/* max-width: 1600px; */
-		/* margin: 0 auto; */
+		max-width: 1600px;
+		margin-inline: auto;
 	}
 
 	.header {
@@ -311,6 +355,7 @@ main {
 				right: 0;
 				top: 0;
 				z-index: initial;
+				padding: 0;
 
 				.navitem {
 					.navlink {
@@ -318,11 +363,18 @@ main {
 						text-decoration: none;
 						transition: color var(--transition-200ms);
 
-						&:hover {
+						&:hover,
+						&:focus {
 							color: var(--accent);
 						}
 					}
 				}
+			}
+		}
+
+		.hero {
+			.btn-container {
+				flex-flow: row wrap;
 			}
 		}
 	}
