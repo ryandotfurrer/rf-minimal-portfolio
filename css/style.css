@@ -340,6 +340,11 @@ img {
 }
 
 @media only screen and (min-width: 1024px) {
+	.wrapper {
+		width: min(100% - 4rem, 80ch);
+		margin-inline: auto;
+	}
+
 	.btn-primary {
 		transition: background var(--transition-200ms),
 			border-color var(--transition-200ms);
