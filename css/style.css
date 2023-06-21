@@ -31,9 +31,12 @@ section {
 	margin-block-start: var(--flow-space, 1em);
 }
 
-.flow:is(section),
 .flow > section > * {
 	--flow-space: 3em;
+}
+
+.flow.flow:is(section) {
+	--flow-space: 6em;
 }
 
 h1,
@@ -167,8 +170,8 @@ img {
 		}
 	}
 
-	.hero {
-		--flow-space: initial;
+	#hero {
+		--flow-space: 1em;
 		display: flex;
 		flex-flow: column wrap;
 		justify-content: center;
@@ -189,15 +192,18 @@ img {
 		}
 
 		> .btn-container {
+			animation-delay: 1s;
+			animation-duration: 1.5s;
+			animation-timing-function: var(--ease-1);
+			animation: var(--animation-fade-in) forwards;
 			display: flex;
 			flex-flow: column wrap;
 			gap: 1.5em;
 			margin-block-start: 3em;
 			opacity: 0;
-			animation: var(--animation-fade-in) forwards;
-			animation-timing-function: var(--ease-1);
-			animation-duration: 1.5s;
-			animation-delay: 1s;
+			> a {
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -394,7 +400,7 @@ img {
 			}
 		}
 
-		.hero {
+		#hero {
 			.btn-container {
 				flex-flow: row wrap;
 			}
@@ -450,52 +456,46 @@ img {
 
 		.btn-container {
 			> button {
-				transition: scale var(--transition-200ms);
-
 				&:hover {
-					scale: 1.25;
+					border-color: var(--header);
 				}
 			}
 		}
 	}
 
-	/* .footer {
+	.footer {
 		.footer-inner-container {
-			align-items: center;
-			display: flex;
-			flex-flow: row wrap;
-			gap: 3em;
-			justify-content: space-between;
-			max-width: 1600px;
+			--flow-space: 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 
-			> div {
-				flex-basis: 50%;
-			}
-		}
+			.social-links-container > ul,
+			.sitemap-container > ul {
+				display: flex;
+				gap: 1.5em;
+				list-style: none;
+				padding-inline-start: 0;
 
-		.social-links-container {
-			> ul {
-				> li {
-					> a {
-						&:hover {
-							color: var(--accent);
-						}
+				> li > a {
+					color: var(--text);
+					text-decoration: none;
+					font-weight: var(--font-weight-6);
+					transition: color var(--transition-200ms);
+					&:hover {
+						color: var(--accent);
+					}
+
+					> i {
+						font-size: var(--font-size-fluid-2);
 					}
 				}
 			}
-		}
 
-		.sitemap-container {
-			> ul {
-				flex-direction: row;
-				> li {
-					> a {
-						&:hover {
-							color: var(--accent);
-						}
-					}
+			.social-links-container {
+				> ul {
+					margin-block-start: 1em;
 				}
 			}
 		}
-	} */
+	}
 }
