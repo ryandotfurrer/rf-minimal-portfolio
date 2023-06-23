@@ -190,18 +190,24 @@ img {
 			animation-delay: 0.6s;
 		}
 
-		> .btn-container {
+		> .link-container {
+			animation: var(--animation-fade-in) forwards;
 			animation-delay: 1s;
 			animation-duration: 1.5s;
 			animation-timing-function: var(--ease-1);
-			animation: var(--animation-fade-in) forwards;
 			display: flex;
 			flex-flow: column wrap;
 			gap: 1.5em;
 			margin-block-start: 3em;
 			opacity: 0;
 			> a {
+				font-size: var(--font-size-fluid-1);
+				font-weight: 600;
 				text-decoration: none;
+
+				&:first-child {
+					color: var(--text);
+				}
 			}
 		}
 	}
@@ -257,6 +263,30 @@ img {
 			> * > img {
 				border-radius: var(--radius-1);
 				object-fit: cover;
+			}
+		}
+	}
+
+	> .link-container {
+		> a {
+			color: var(--header);
+			font-weight: 600;
+			font-size: var(--font-size-fluid-1);
+			text-decoration: none;
+			transition: color var(--transition-200ms);
+			/* display: flex;
+			align-items: center; */
+
+			> i {
+				transition: transform var(--transition-200ms);
+			}
+
+			&:hover {
+				color: var(--accent);
+
+				> i {
+					transform: translateX(1em);
+				}
 			}
 		}
 	}
@@ -405,8 +435,49 @@ img {
 		}
 
 		#hero {
-			.btn-container {
+			> .link-container {
 				flex-flow: row wrap;
+
+				> a {
+					/* Relative position needed for underline hover effect */
+					/* position: relative; */
+					transition: color var(--transition-200ms);
+					padding: 1em 1em 1em 0;
+
+					&:first-of-type:hover {
+						color: var(--header);
+					}
+					&:last-of-type:hover {
+						animation: var(--animation-bounce);
+						animation-iteration-count: infinite;
+					}
+
+					&:last-of-type {
+						animation: var(--animation-bounce);
+						animation-iteration-count: 3;
+						animation-delay: 2000ms;
+					}
+				}
+
+				/* Underline Hover Effect */
+				/* > a::before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 4px;
+					border-radius: 4px;
+					background-color: var(--accent);
+					bottom: 0;
+					left: 0;
+					transform-origin: right;
+					transform: scaleX(0);
+					transition: transform var(--transition-200ms);
+				}
+
+				> a:hover::before {
+					transform-origin: left;
+					transform: scaleX(1);
+				} */
 			}
 		}
 	}
