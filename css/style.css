@@ -109,6 +109,7 @@ img {
 		.navlist {
 			align-items: flex-end;
 			background-color: var(--background-medium);
+			background-size: cover;
 			display: flex;
 			flex-direction: column;
 			gap: 2em;
