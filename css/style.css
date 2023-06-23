@@ -177,6 +177,7 @@ img {
 		height: 95svh;
 
 		> h2 {
+			font-size: var(--font-size-fluid-3);
 			opacity: 0;
 			animation: var(--animation-fade-in) forwards;
 			animation-timing-function: var(--ease-1);
@@ -184,6 +185,7 @@ img {
 		}
 
 		> h3 {
+			font-size: var(--font-size-fluid-2);
 			opacity: 0;
 			animation: var(--animation-fade-in) forwards;
 			animation-timing-function: var(--ease-2);
@@ -447,15 +449,16 @@ img {
 					&:first-of-type:hover {
 						color: var(--header);
 					}
-					&:last-of-type:hover {
+				}
+
+				> #hero-link-cta {
+					animation: var(--animation-bounce);
+					animation-iteration-count: 3;
+					animation-delay: 2000ms;
+
+					&:hover {
 						animation: var(--animation-bounce);
 						animation-iteration-count: infinite;
-					}
-
-					&:last-of-type {
-						animation: var(--animation-bounce);
-						animation-iteration-count: 3;
-						animation-delay: 2000ms;
 					}
 				}
 
