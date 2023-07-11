@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Minimal Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Ryan Furrer" />
+		<meta name="description" content="A beautiful yet minimal website" />
+		<meta property="og:title" content="Minimal Portfolio" />
+		<meta property="og:description" content="A beautiful yet minimal website" />
+		<!-- <meta property="og:image" content="/some-image.png" /> -->
+		<meta property="og:url" content="https://minrf.netlify.app/" />
+		<meta property="og:site_name" content="Minimal Portfolio" />
+		<!-- <meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image:alt" content="image description" /> -->
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+
+		<script
+			src="https://kit.fontawesome.com/dec2579292.js"
+			crossorigin="anonymous"
+			async
+			defer
+		></script>
+		<link rel="stylesheet" href="https://unpkg.com/open-props" />
+
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body">
+		<div class="body-inner-container">
+			<header class="header">
+				<nav class="nav">
+					<h1>
+						<a href="/index.html" id="logo" class="navlink">min</a>
+					</h1>
+					<ul class="navlist">
+						<li class="navitem">
+							<a href="#projects" class="navlink">Projects</a>
+						</li>
+						<li class="navitem">
+							<a href="#blog" class="navlink">Blog</a>
+						</li>
+						<li class="navitem">
+							<a href="/pages/about.html" class="navlink">About</a>
+						</li>
+						<li class="navitem">
+							<a href="/pages/now.html" class="navlink">Now</a>
+						</li>
+					</ul>
+					<button id="hamburger" name="Mobile Menu" aria-label="Mobile Menu">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+				</nav>
+				<section id="hero" class="flow">
+					<h2 class="title">I'm Ryan - a front-end web developer.</h2>
+					<h3 class="subtitle">
+						Creating fast, dependable, and modern websites one line of code at a
+						time.
+					</h3>
+					<div class="link-container">
+						<a href="#projects"
+							><i class="fa-solid fa-code-branch"></i> View Projects</a
+						>
+						<a id="hero-link-cta" href="#contact-me"
+							><i class="fa-solid fa-envelope"></i> Contact Me</a
+						>
+					</div>
+				</section>
+			</header>
+
+			<main class="main flow">
+				<section id="projects" class="projects flow">
+					<h2>Projects</h2>
+					<div class="all-projects-container">
+						<article class="project-container flow">
+							<div class="project-title-container">
+								<a href="#">
+									<h4>Project</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, nostrum.
+							</p>
+						</article>
+						<article class="project-container flow">
+							<div class="project-title-container">
+								<a href="#">
+									<h4>Project</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, nostrum.
+							</p>
+						</article>
+						<article class="project-container flow">
+							<div class="project-title-container">
+								<a href="#">
+									<h4>Project</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, nostrum.
+							</p>
+						</article>
+						<article class="project-container flow">
+							<div class="project-title-container">
+								<a href="#">
+									<h4>Project</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, nostrum.
+							</p>
+						</article>
+						<article class="project-container flow">
+							<div class="project-title-container">
+								<a href="#">
+									<h4>Project</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, nostrum.
+							</p>
+						</article>
+					</div>
+
+					<aside class="newsletter-cta flow">
+						<h3>Subscribe to my newsletter - The RF Newsletter</h3>
+						<div class="input-container">
+							<iframe
+								src="https://embeds.beehiiv.com/5e11b724-b790-485c-9a37-673d6376561a?slim=true"
+								data-test-id="beehiiv-embed"
+								height="52px"
+								frameborder="0"
+								scrolling="no"
+							></iframe>
+
+							<p>
+								<small
+									>Powered by
+									<a
+										href="https://www.beehiiv.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+										>beehiiv</a
+									></small
+								>
+							</p>
+						</div>
+					</aside>
+
+				</section>
+
+				<section id="blog" class="blog flow">
+					<h2>Posts</h2>
+					<div class="all-posts-container">
+						<article class="blog-post-container flow">
+							<a href="#">
+								<img
+									src="https://source.unsplash.com/random/800x200/?img=1"
+									alt="placeholder"
+							/></a>
+							<div class="blog-post-title-container">
+								<a href="#">
+									<h4>Lorem, ipsum dolor.</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Consequuntur deleniti consectetur laboriosam ipsa repudiandae
+								architecto.
+							</p>
+						</article>
+						<article class="blog-post-container flow">
+							<a href="#">
+								<img
+									src="https://source.unsplash.com/random/800x200/?img=1"
+									alt="placeholder"
+							/></a>
+							<div class="blog-post-title-container">
+								<a href="#">
+									<h4>Lorem, ipsum.</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Consequuntur deleniti consectetur laboriosam ipsa repudiandae
+								architecto.
+							</p>
+						</article>
+						<article class="blog-post-container flow">
+							<a href="#">
+								<img
+									src="https://source.unsplash.com/random/800x200/?img=1"
+									alt="placeholder"
+							/></a>
+							<div class="blog-post-title-container">
+								<a href="#">
+									<h4>Lorem ipsum dolor sit amet.</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Consequuntur deleniti consectetur laboriosam ipsa repudiandae
+								architecto.
+							</p>
+						</article>
+						<article class="blog-post-container flow">
+							<a href="#">
+								<img
+									src="https://source.unsplash.com/random/800x200/?img=1"
+									alt="placeholder"
+							/></a>
+							<div class="blog-post-title-container">
+								<a href="#">
+									<h4>Lorem, ipsum dolor.</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Consequuntur deleniti consectetur laboriosam ipsa repudiandae
+								architecto.
+							</p>
+						</article>
+						<article class="blog-post-container flow">
+							<a href="#">
+								<img
+									src="https://source.unsplash.com/random/800x200/?img=1"
+									alt="placeholder"
+							/></a>
+							<div class="blog-post-title-container">
+								<a href="#">
+									<h4>Lorem, ipsum dolor.</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Consequuntur deleniti consectetur laboriosam ipsa repudiandae
+								architecto.
+							</p>
+						</article>
+						<article class="blog-post-container flow">
+							<a href="#">
+								<img
+									src="https://source.unsplash.com/random/800x200/?img=1"
+									alt="placeholder"
+							/></a>
+							<div class="blog-post-title-container">
+								<a href="#">
+									<h4>Lorem ipsum dolor sit.</h4>
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Consequuntur deleniti consectetur laboriosam ipsa repudiandae
+								architecto.
+							</p>
+						</article>
+					</div>
+					<div class="link-container">
+						<a href="#"
+							>See all posts <i class="fa-solid fa-arrow-right"></i
+						></a>
+					</div>
+				</section>
+
+				<aside id="contact-me" class="contact-cta flow">
+					<h3>Get in touch</h3>
+					<div class="btn-container">
+						<button id="contact-cta-button" class="btn-primary">
+							Contact Me
+						</button>
+					</div>
+				</aside>
+			</main>
+
+			<footer class="footer flow">
+				<div class="footer-inner-container flow">
+					<section class="social-links-container">
+						<h4>Social Links</h4>
+						<ul>
+							<li>
+								<a
+									href="https://github.com/ryanfurrer"
+									target="_blank"
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-github"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/ryanfurrer/"
+									target="_blank"
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://bsky.app/profile/ryanfurrer.bsky.social"
+									target="_blank"
+									rel="noopener noreferrer"
+									><i class="fa-solid fa-cloud"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://twitter.com/ryan_furrer"
+									target="_blank"
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://mastodon.social/@ryanfurrer"
+									target="_blank"
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-mastodon"></i
+								></a>
+							</li>
+						</ul>
+					</section>
+
+					<section class="newsletter-container">
+						<h4>Subscribe</h4>
+						<p>Subscribe to my newsletter - The RF Newsletter</p>
+						<div class="input-container">
+							<iframe
+								src="https://embeds.beehiiv.com/5e11b724-b790-485c-9a37-673d6376561a?slim=true"
+								data-test-id="beehiiv-embed"
+								height="52"
+								frameborder="0"
+								scrolling="no"
+								style="
+									margin: 0;
+									border-radius: 0px !important;
+									background-color: transparent;
+								"
+							></iframe>
+
+							<p>
+								<small
+									>Powered by
+									<a
+										href="https://www.beehiiv.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+										>beehiiv</a
+									></small
+								>
+							</p>
+						</div>
+					</section>
+
+					<section class="sitemap-container">
+						<h4>Sitemap</h4>
+						<ul>
+							<li><a href="/index.html">Home</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#blog">Blog</a></li>
+							<li><a href="/pages/about.html">About</a></li>
+							<li><a href="/pages/now.html">Now</a></li>
+							<li><a href="#contact-me">Contact</a></li>
+						</ul>
+					</section>
+				</div>
+				<section class="copyright-container">
+					<small
+						>All rights reserved &copy;
+						<a
+							href="https://ryanfurrer.com/"
+							rel="noopener noreferrer"
+							target="_blank"
+							>Ryan Furrer</a
+						>
+						<span id="footer-year">
+							<!-- Filled in with JavaScript -->
+						</span></small
+					>
+				</section>
+			</footer>
+		</div>
+
+		<script type="text/javascript" async src="/js/get-current-year.js"></script>
+		<script type="text/javascript" async src="/js/mobile-menu.js"></script>
+		<script
+			type="text/javascript"
+			async
+			src="https://embeds.beehiiv.com/attribution.js"
+		></script>
+	</body>
+</html>
